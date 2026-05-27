@@ -11,14 +11,12 @@ from visualizer import Visualizer
 def main():
     print("Initializing Air Instrument...")
     
-    # Initialize components
     tracker = HandTracker()
     classifier = GestureClassifier()
     sound_engine = SoundEngine()
     midi_bridge = MidiBridge()
     visualizer = Visualizer()
     
-    # Initialize WebCam
     cap = cv2.VideoCapture(0)
     if not cap.isOpened():
         print("Error: Could not open webcam.")
